@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8 />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1,user-scalable=no">
+<title>WMS PROJECT</title>
+<link rel="stylesheet" href="../wmsproject/indexcss.css">
+<script src="../wmsproject/indexdivaction.js"></script>
+</head>
+<body>
+<div class="full-height"><div id="myBtnContainer" >
+  <button class="btn" id = "About" onclick="SwaDivContent0()"> About</button>
+  <button class="btn" onclick="SwaDivContent1()"> Knowledge Space</button>
+  <button class="btn" id ="Explore 2D Map" onclick="SwaDivContent2(); load_content();"> Explore 2D Map</button>
+  <button class="btn" onclick="SwaDivContent3()"> Explore 3D Map</button>
+  <button class="btn" onclick="SwaDivContent4()"> Share Your Interest</button>
+</div></div>
+<script>
+  <!-- Add active class to the current button -->
+  // Get the container element
+  var btnContainer = document.getElementById("myBtnContainer");
+  
+  // Get all buttons with class="btn" inside the container
+  var btns = btnContainer.getElementsByClassName("btn");
+  
+  // Loop through the buttons and add the active class to the current/clicked button
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active");
+      // If there's no active class
+      if (current.length > 0) {
+        current[0].className = current[0].className.replace(" active", "");
+      }
+      // Add the active class to the current/clicked button
+      this.className += " active";
+    });
+  }
+  </script>
+<div id="H"></div>
+<div id="A" class="ful-height"><span>Hi this page is under construction</br></span></div>
+<div id="B"class="ful-height"><span>Hi we are updating this information</span></div>
+<div id="C" class="ful-height"><span></span></div>
+<div id="D" class="ful-height"><span>We will shortly update you</span></div>
+<div id="E" class="ful-height"><span>Thanks for your interest</span></div>
+</body>
+</html>

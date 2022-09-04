@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <style>
+    html,
+    body,
+    #viewDiv  {
+      padding: 0;
+      margin: 0;
+      height: 100vh;
+      width: 100vd;
+	  overflow: hidden:
+    }
+  </style>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.19/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.19/"></script>
+  <!--<link rel="stylesheet" href="http://localhost/arcgis_js_api/library/4.14/esri/css/main.css">
+  <script src= "http://localhost/arcgis_js_api/library/4.14/init.js"></script>-->
+  <link rel="stylesheet" href="../wmsproject/indexxxcss.css">
+  <script src="../wmsproject/indexxxdivaction.js"></script>
+  <script src="../wmsproject/mapcontroll.js"></script>
+</head>
+<body class="calcite">
+    <div id="viewDiv">
+    <div class="full-height"><div id="myBtnContainer" >
+      <button id="S" class="btn" onclick="SwaDivContent0()"> Search</button>
+      <button id="L" class="btn" onclick="SwaDivContent1()"> Layer</button>
+      <button id="LQ" class="btn" onclick="SwaDivContent5()"> Layer Query</button>
+      <button id="LE" class="btn" onclick="SwaDivContent2()"> legend</button>
+      <button id="M" class="btn" onclick="SwaDivContent3()"> BasemapGallery</button>
+      <button id="Ex" class="btn" onclick="SwaDivContent4()"> Exportmap</button>
+    </div></div>
+   <!--<script src="/wmsproject/dcbtnaction.js"></script> -->
+    <div id="H" ></div>
+    <div id="A" class="ful-height"><span><b>Search Your Interest</b></span><div class="close"><button class="cbtn" onclick="SwaDivContent6()">x</button></div></div>
+	<div id="SC" class="ful-height"><br></div>
+	<div id="B" class="ful-height"><span><b>Layer</b></span><div class="close"><button class="cbtn" onclick="SwaDivContent7()">x</button></div></div>
+	<div id="LC" class="ful-height"><br></div>
+	<div id="F" class="ful-height"><span><b>Layer Query</b></span><div class="close"><button class="cbtn" onclick="SwaDivContent11()">x</button></div><br>
+      <select  id="lyrSelect">
+        <option value="qroadTask" selected>Road</option>
+        <option value="Rail" >Rail</option>
+		<option value="Rail" >Landuse_Landcover</option>
+		<option value="Rail" >Building_Footprint</option>
+      </select>
+      <select  id="signSelect">
+        <option value="=">Level_2</option>
+      </select>
+      <select  id="valSelect">
+        <option value="National Highway" selected>National Highway</option>
+        <option value="Major City Road2">Major City Road</option>
+        <option value="Minor City Road">Minor City Road</option>
+      </select>
+      <button  id="doBtn">Do Query</button> <br />
+      <p><span id="printResults"></span></p></div>
+	 <div id="LQC" class="ful-height"></div>
+    <div id="C" class="ful-height"><span><b>Legend</b></span><div class="close"><button class="cbtn" onclick="SwaDivContent8()">x</button></div></div>
+	<div id="LGC" class="ful-height"><br></div>
+    <div id="D" class="ful-height"><span><b>BasemapGallery List</b></span><div class="close"><button class="cbtn" onclick="SwaDivContent9()">x</button></div></div>
+	<div id="BGC" class="ful-height"><br></div>
+    <div id="E" class="ful-height"><span><b>Exportmap</b></span><div class="close"><button class="cbtn" onclick="SwaDivContent10()">x</button></div></div>
+	<div id="EMC" class="ful-height"><br></div>
+  </div>
+  <div id="coordsWidget" class="coords-height"></div>
+</body>
+</html> 
